@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue To Do List</title>
     <link rel="stylesheet" href="./CSS/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -12,13 +13,13 @@
     <header>
 
     </header>
-    <main>
+    <main id="app">
         <section class="container">
             <div class="card">
                 <div class="card-body">
                     <ul>
-                        <li>
-                            
+                        <li v-for="todo in todoList" :class="todo.done === true ? 'checked' : ''">
+                            {{todo.text}}
                         </li>
                     </ul>
                 </div>

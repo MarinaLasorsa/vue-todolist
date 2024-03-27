@@ -1,11 +1,11 @@
 const todoList = [
     {
         text: "Prenotare appuntamento dal dottore",
-        done: false
+        done: true
     }, 
     {
         text: "Chiamare mamma",
-        done: false
+        done: true
     }, 
     {
         text: "Fare la spesa",
@@ -23,10 +23,10 @@ const todoList = [
 
 const { createApp } = Vue
 
-  createApp({
+createApp({
     data() {
       return {
         todoList: todoList
       }
     }
-  }).mount('#app')
+}).mount('#app')

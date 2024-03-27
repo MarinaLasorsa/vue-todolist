@@ -12,6 +12,27 @@ img {
     max-width: 100%;
 }
 
+body {
+    background-color: rgb(255, 215, 221);
+    font-family: "Poppins", sans-serif;
+}
+
 .container {
-    max-width: 600px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.card li {
+    line-height: 30px;
+}
+
+.checked {
+    text-decoration: line-through;
 }
