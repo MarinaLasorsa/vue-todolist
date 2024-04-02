@@ -6,6 +6,7 @@
     <title>Vue To Do List</title>
     <link rel="stylesheet" href="./CSS/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/5e4eaeffdb.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -15,13 +16,15 @@
     </header>
     <main id="app">
         <section class="container">
-            <div class="card">
+            <div class="card"> 
                 <div class="card-body">
                     <ul>
-                        <li v-for="todo in todoList" :class="todo.done === true ? 'checked' : ''">
+                        <li v-for="todo, i in todoList" :class="todo.done === true ? 'checked' : ''">
                             {{todo.text}}
+                            <span class="delete-icon" @click="deleteTodo(i)"><i class="fa-solid fa-trash"></i></span>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </section>

@@ -23,16 +23,28 @@ body {
 }
 
 .card {
-    background-color: white;
     border-radius: 10px;
     margin: 50px 0;
     padding: 20px;
+    background-color: white;
+}
+
+.card-body {
+    background-color: white;
+    color: black;
 }
 
 .card li {
     line-height: 30px;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
 }
 
 .checked {
     text-decoration: line-through;
+}
+
+.delete-icon {
+    cursor: pointer;
 }
