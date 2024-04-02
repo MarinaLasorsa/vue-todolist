@@ -24,14 +24,22 @@ body {
 
 .card {
     border-radius: 10px;
-    margin: 50px 0;
-    padding: 20px;
     background-color: white;
+    margin: 50px 0;
+}
+
+.card-header {
+    background-color: rgb(255, 70, 101);
+    display: flex;
+    padding: 20px 20px 10px;
+    border-radius: 10px 10px 0 0;
 }
 
 .card-body {
     background-color: white;
     color: black;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
 }
 
 .card li {
@@ -47,4 +55,16 @@ body {
 
 .delete-icon {
     cursor: pointer;
+}
+
+#todo-bar {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+    flex-grow: 1;
+}
+
+.add-button {
+    padding: 5px;
 }

@@ -26,12 +26,17 @@ const { createApp } = Vue
 createApp({
     data() {
       return {
-        todoList: todoList
+        todoList: todoList,
+        inputValue: ""
       }
     },
     methods: {
         deleteTodo(index) {
             this.todoList.splice(index, 1)
+        },
+        addTodo() {
+            this.todoList.push({text: this.inputValue, done: false});
+            this.inputValue = "";
         }
     }
 }).mount('#app')

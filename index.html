@@ -17,6 +17,10 @@
     <main id="app">
         <section class="container">
             <div class="card"> 
+                <div class="card-header">
+                    <input type="text" v-model="inputValue" id="todo-bar" name="todo-bar"/>
+                    <input type="submit" class="add-button" value="Aggiungi" @click="addTodo"/>
+                </div>
                 <div class="card-body">
                     <ul>
                         <li v-for="todo, i in todoList" :class="todo.done === true ? 'checked' : ''">
