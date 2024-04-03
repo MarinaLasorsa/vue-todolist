@@ -1,11 +1,11 @@
 const todoList = [
     {
         text: "Prenotare appuntamento dal dottore",
-        done: true
+        done: false
     }, 
     {
         text: "Chiamare mamma",
-        done: true
+        done: false
     }, 
     {
         text: "Fare la spesa",
@@ -37,6 +37,13 @@ createApp({
         addTodo() {
             this.todoList.push({text: this.inputValue, done: false});
             this.inputValue = "";
+        },
+        toggleDone(el) {
+            if (el.done === false) {
+                el.done = true
+            } else {
+                el.done = false
+            }
         }
     }
 }).mount('#app')

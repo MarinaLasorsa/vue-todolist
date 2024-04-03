@@ -24,7 +24,7 @@
                 <div class="card-body">
                     <ul>
                         <li v-for="todo, i in todoList" :class="todo.done === true ? 'checked' : ''">
-                            <span>{{todo.text}}</span>
+                            <span @click="toggleDone(todo)">{{todo.text}}</span>
                             <span class="delete-icon" @click="deleteTodo(i)"><i class="fa-solid fa-trash"></i></span>
                         </li>
                     </ul>
